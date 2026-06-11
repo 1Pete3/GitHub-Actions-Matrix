@@ -1,0 +1,13 @@
+name: Another_matrix
+run-name: ${{github.actor}}
+on: [push]
+jobs:
+    another_matrix:
+        runs-on: ubuntu-latest
+        strategy:
+            max-parallel: 3
+            matrix:
+                colors: ["Red", "Green", "Blue"]
+                shapes: ["Circle", "Square"]
+        steps:
+            - run: echo "${{ matrix.colors}} ${{ matrix.shapes }}"
