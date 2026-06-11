@@ -1,6 +1,8 @@
 name: Another_matrix
 run-name: ${{github.actor}}
-on: [push]
+on: 
+    workflow_dispatch:
+    push:
 jobs:
     another_matrix:
         runs-on: ubuntu-latest
